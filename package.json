@@ -1,0 +1,20 @@
+{
+  "name": "fotijr",
+  "version": "1.0.0",
+  "description": "Personal site of Dominic Foti Jr",
+  "scripts": {
+    "serve": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "main": "index.js",
+  "repository": "https://github.com/fotijr/personal-site",
+  "author": "Dominic Foti Jr",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@vuepress/plugin-blog": "^1.8.0",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0",
+    "vuepress": "^1.2.0"
+  }
+}

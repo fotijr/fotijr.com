@@ -1,0 +1,79 @@
+@font-face {
+    font-family: 'Major Mono Display';
+    src: url(/fonts/MajorMonoDisplay-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Inconsolata';
+    src: url(/fonts/Inconsolata-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Inconsolata';
+    font-weight: bold;
+    src: url(/fonts/Inconsolata-Bold.ttf);
+}
+
+body {
+    font-family: 'Inconsolata', monospace;
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Major Mono Display', monospace;
+}
+
+h1,
+h2 {
+    a.header-anchor {
+        visibility: hidden;
+        text-decoration: none;
+    }
+
+    &:hover {
+        a.header-anchor {
+            visibility: visible !important;
+        }
+    }
+}
+
+a {
+    color: #000;
+}
+
+.content__default {
+    margin: 1em 2em;
+}
+
+.row {
+    flex-direction: row;
+    display: flex;
+
+    .col {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 0.7em;
+    }
+}
+
+.blog-title {
+    margin-bottom: 1.5em;
+
+    h1 {
+        font-family: 'Inconsolata', monospace;
+        margin-bottom: 0.2em;
+    }
+
+    time {
+        padding-left: 1em;
+    }
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin-bottom: 1em;
+}
