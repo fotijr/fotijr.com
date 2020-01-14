@@ -20,14 +20,14 @@ export default [
         of knowledge.`
     },
     {
-        title: 'Comparing Strings Efficiently', url: '', date: new Date(),
+        title: 'Comparing Strings Efficiently', url: '/blog/2014/comparing-strings-efficiently/', date: new Date(),
         description: 'When comparing strings, nothing compares to StringComparison.',
         preview: `After doing some tests to measure the performance of StringBuilder, I started thinking 
         about other ways strings are commonly used. What are some common inefficiencies, and how 
         can I avoid them? I first thought of evaluating strings.`
     },
     {
-        title: 'How Good is StringBuilder?', url: '', date: new Date(),
+        title: 'How Good is StringBuilder?', url: '/blog/2014/how-good-is-stringbuilder/', date: new Date(),
         description: `For some reason, I really enjoy using StringBuilder. I often get to 
         refactor code, and one of the common code improvements I find myself making is replacing 
         someString += moreString with someStringBuilder.Append(moreString). Doing that en masse 

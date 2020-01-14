@@ -1,5 +1,4 @@
 <h1>Contact Me</h1>
-<p>If you must:</p>
 
 <dl>
     <dt>Email</dt>

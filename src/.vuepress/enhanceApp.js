@@ -1,3 +1,4 @@
+import './date-filter';
 import '../main.scss';
 
 export default ({
