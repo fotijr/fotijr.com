@@ -35,7 +35,7 @@ export default [
         contributing?`
     },
     {
-        title: 'Building That Schedule Maker', url: '', date: new Date(),
+        title: 'Building That Schedule Maker', url: '/blog/2014/building-that-schedule-maker/', date: new Date(),
         description: `That Conference is a “summer camp for geeks” starting on 
         August 11th. It’s a three day technical conference packed with talks on mobile 
         and web software development. There are over 150 sessions, but only so many 
@@ -43,7 +43,7 @@ export default [
         and which will you have to miss?`
     },
     {
-        title: 'Stop Using XMLDocument', url: '', date: new Date(),
+        title: 'Stop Using XMLDocument', url: '/blog/2014/stop-using-xmldocument/', date: new Date(),
         description: 'After struggling with XMLDocument, I finally turned to XDocument.'
     }
 ];
