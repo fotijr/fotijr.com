@@ -25,10 +25,7 @@
 
 <script>
 export default {
-  name: "site-header",
-  mounted() {
-    console.log(this.$page);
-  }
+  name: "site-header"
 };
 </script>
 
@@ -53,7 +50,6 @@ export default {
     letter-spacing: 0.2em;
     border-right: 0.7em solid #000;
     margin-right: -0.6em;
-    // padding-right: 1em;
     animation: typing 0.6s steps(8, end), blink-caret 0.75s 8;
     animation-fill-mode: forwards;
   }
@@ -81,6 +77,16 @@ export default {
   }
 }
 
+@media (max-width: 500px) {
+  nav {
+    flex-direction: column;
+
+    li {
+      margin: 1em !important;
+    }
+  }
+}
+
 nav {
   display: flex;
 
@@ -91,12 +97,12 @@ nav {
     align-items: center;
     display: flex;
 
-    &.light{
+    &.light {
       flex: 0 1;
       padding-right: 4em;
     }
 
-    &.dark{
+    &.dark {
       background-color: #000;
       border-width: 0;
     }
