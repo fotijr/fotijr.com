@@ -7,7 +7,12 @@
           :datetime="post.date"
         >{{ post.date | toDate }}</time>
     <p>{{ post.description }}</p>
-    <a :href="post.url">Read more</a>
+    <div class="bottom-row">
+      <a :href="post.url">Read more</a>
+      <div class="tags">
+        <span v-for="tag in post.tags">{{ tag }}</span>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -35,6 +40,25 @@ export default {
 
   p{
     margin-bottom: 0.2em;
+  }
+
+  .bottom-row {
+    display: flex;
+    margin-left: 1em;
+    margin-top: 0.5em;
+  }
+
+  .tags{
+    margin-left: 20%;
+    margin-top: 0.7em;
+
+    span{
+      background-color: #000;
+      color: #fff;
+      padding: 0.2em 0.35em;
+      margin-right: 0.4em;
+      font-size: 14px;
+    }
   }
 }
 </style>
