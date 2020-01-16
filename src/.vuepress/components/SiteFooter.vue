@@ -33,6 +33,20 @@ export default {
 </script>
 
 <style lang="scss">
+@media (max-width: 500px) {
+  footer {
+    flex-direction: column !important;
+
+    ul {
+      display: inline-flex;
+
+      li {
+        margin: auto;
+      }
+    }
+  }
+}
+
 footer {
   display: flex;
   margin-top: 3em;
