@@ -4,7 +4,7 @@ I'm Dominic. I'm a full stack software engineer working mostly with JavaScript/T
 </p>
 
 <div class="row">
-    <div class="col">
+    <div class="col projects">
         <h2>Projects</h2>
         <p>
         I'm usually working on something. Check out some of my in-progress and completed projects.
@@ -12,9 +12,11 @@ I'm Dominic. I'm a full stack software engineer working mostly with JavaScript/T
         <ul>
             <li>Navo</li>
             <li>Speedy Unicode</li>
-            <li>ASCII Camera</li>
+            <li>Boo's Kitchen</li>
         </ul>
-        <a href="/projects">View all projects</a>
+        <div>
+          ⮑ <a href="/projects">View all projects</a>
+        </div>
     </div>
     <div class="col">
         <h2>Blog</h2>
@@ -22,6 +24,9 @@ I'm Dominic. I'm a full stack software engineer working mostly with JavaScript/T
             <div class="post" v-for="post in recentPosts">
                 <h3><a :href="post.url">{{ post.title }}</a></h3>
                 <p>{{ post.description }} <a :href="post.url">Read more</a></p>
+            </div>
+            <div class="after-posts">
+              ⮑ <a href="/blog">View all posts</a>
             </div>
         </div>
     </div>
@@ -31,7 +36,7 @@ I'm Dominic. I'm a full stack software engineer working mostly with JavaScript/T
 import posts from './blog/posts';
 export default {
   mounted() {
-    console.log(posts);
+    // console.log(posts);
   },
   data() {
     return {
@@ -40,3 +45,19 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+@media (max-width: 500px) {
+  .row {
+    flex-direction: column;
+  }
+
+  h2 {
+      margin-bottom: 0;
+  }
+}
+
+.link-row {
+  margin-top: 2em;
+}
+</style>
