@@ -19,9 +19,6 @@
 <script>
 import posts from './posts';
 export default {
-  mounted() {
-    console.log(posts);
-  },
   data() {
     return {
       posts
