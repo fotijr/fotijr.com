@@ -68,6 +68,12 @@ time {
     flex-grow: 1;
 }
 
+@media (max-width: 500px) {
+    .content__default {
+        margin: 1em;
+    }
+}
+
 .row {
     flex-direction: row;
     display: flex;

@@ -81,8 +81,17 @@ export default {
   nav {
     flex-direction: column;
 
-    li {
-      margin: 1em !important;
+    .section.dark {
+      flex: 1 1;
+    }
+
+    ul {
+      padding: 0;
+      justify-content: center;
+
+      li {
+        margin: 1em !important;
+      }
     }
   }
 }
