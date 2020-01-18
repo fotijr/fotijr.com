@@ -12,7 +12,7 @@ I'm Dominic. I'm a full stack software engineer working mostly with JavaScript/T
         <ul>
             <li>Navo</li>
             <li>Speedy Unicode</li>
-            <li>ASCII Camera</li>
+            <li>Boo's Kitchen</li>
         </ul>
         <div>
           ⮑ <a href="/projects">View all projects</a>
