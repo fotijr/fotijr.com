@@ -29,7 +29,7 @@
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .post {
   padding: 1em;
 
