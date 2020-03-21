@@ -7,7 +7,7 @@ meta:
   - name: keywords
     content: csharp dotnet
   - name: description
-    content: How to use XDocument when working with XML documents in C# .NET instead of XMLDocument.
+    content: When working with XML documents in .NET, stop using XMLDocument and instead use XDocument.
 ---
 
 Most of the data I work with in my daily job comes from databases. However, occasionally tasks pop up involving other sources, or I’ll have the need to create something more temporary or easily transferable.

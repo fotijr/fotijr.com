@@ -7,7 +7,7 @@
     </dd>
     <dt>GitHub</dt>
     <dd>
-        <a href="https://github.com/FotiJr" target="_blank">@fotijr</a>    
+        <a href="https://github.com/FotiJr" target="_blank">@FotiJr</a>    
     </dd>
     <dt>Twitter</dt>
     <dd>
@@ -18,3 +18,13 @@
         <a href="https://linkedin.com/in/fotijr" target="_blank">linkedin.com/in/fotijr</a>    
     </dd>
 </dl>
+
+<style>
+dt {
+    margin-bottom: 0.15em;
+}
+
+dd {
+    margin-bottom: 2.5em;
+}
+</style>

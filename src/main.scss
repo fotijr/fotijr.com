@@ -26,7 +26,9 @@ h1 {
 }
 
 h1,
-h2 {
+h2,
+h3,
+h4 {
     a.header-anchor {
         visibility: hidden;
         text-decoration: none;
@@ -92,4 +94,21 @@ dt {
 
 dd {
     margin-bottom: 1em;
+}
+
+p {
+
+    line-height: 1.15em;
+}
+
+ul {
+    list-style-type: square;
+
+    li{
+        margin-top: 0.4em;
+    }
+}
+
+img {
+    max-width: 100%;
 }

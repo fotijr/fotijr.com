@@ -1,23 +1,23 @@
 {
   "name": "fotijr",
   "version": "1.0.0",
-  "description": "Personal site of Dominic Foti Jr",
+  "description": "Personal site of Dominic Foti Jr, served at https://fotijr.com.",
   "scripts": {
     "serve": "vuepress dev src",
     "build": "vuepress build src"
   },
   "main": "index.js",
-  "repository": "https://github.com/fotijr/personal-site",
+  "repository": "https://github.com/fotijr/fotijr.com",
   "author": "Dominic Foti Jr",
   "license": "MIT",
   "private": false,
   "devDependencies": {
-    "@vuepress/plugin-blog": "^1.8.0",
-    "node-sass": "^4.13.0",
-    "sass-loader": "^8.0.0",
-    "vuepress": "^1.2.0"
+    "@vuepress/plugin-blog": "^1.9.2",
+    "node-sass": "^4.13.1",
+    "sass-loader": "^8.0.2",
+    "vuepress": "^1.4.0"
   },
   "dependencies": {
-    "date-fns": "^2.9.0"
+    "date-fns": "^2.11.0"
   }
 }

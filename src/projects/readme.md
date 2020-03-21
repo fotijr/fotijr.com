@@ -1,3 +1,7 @@
+---
+title: Projects
+---
+
 <h1>Projects</h1>
     <div class="project" v-for="project in projects">
         <h2>{{ project.name }}</h2>
@@ -32,7 +36,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 h2 {
     margin-bottom: 0;
 }

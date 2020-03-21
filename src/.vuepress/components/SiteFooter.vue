@@ -19,7 +19,7 @@
     <div class="source">
       View or fork this site on
       <a
-        href="https://github.com/fotijr/personal-site"
+        href="https://github.com/fotijr/fotijr.com"
         target="_blank"
       >GitHub</a>.
     </div>

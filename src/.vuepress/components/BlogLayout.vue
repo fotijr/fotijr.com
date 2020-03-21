@@ -6,15 +6,22 @@
         <h1>{{ this.$page.title }}</h1>
         <time
           :datetime="this.$page.frontmatter.published"
-        >{{ this.$page.frontmatter.published | toDate }}</time>
+        >{{ new Date(this.$page.frontmatter.published).setUTCHours(12) | toDate }}</time>
       </div>
       <div class="row layout">
         <div class="col content">
           <Content />
         </div>
         <div class="col about">
-          <h3>About Me</h3>Hi, I'm Dominic. I'm a software developer working mostly with .NET and other web technologies.
-          Check out some of my projects, or get in touch with me.
+          <h3>About Me</h3>
+          <p>
+            Hi, I'm Dominic. I'm a software engineer working mostly with .NET Core and web technologies.
+            Check out some of my
+            <a
+              href="/projects"
+            >projects</a>, or
+            <a href="/contact">get in touch</a>.
+          </p>
         </div>
       </div>
     </div>
@@ -22,7 +29,7 @@
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .post {
   padding: 1em;
 
@@ -43,6 +50,7 @@
 
     .content {
       max-width: 850px;
+      padding: 0;
 
       .content__default {
         margin-top: 0;
@@ -51,6 +59,10 @@
 
     .about {
       max-width: 265px;
+
+      p {
+        margin: 0;
+      }
     }
 
     @media (max-width: 1100px) {
