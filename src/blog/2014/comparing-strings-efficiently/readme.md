@@ -18,7 +18,7 @@ In my own tests (full code [here](http://gist.github.com/fotijr/88eab8d947759f70
 
 StringComparison is the proper way to compare strings (bet you didn’t see _that_ coming). Using `.ToUpper()` or `.ToLower()` creates another string in memory, while using StringComparison avoids that step allowing a much more efficient comparison.
 
-```c#
+```csharp
 string someString = "hello";
 string otherString = "HELLO";
 if (someString.Equals(otherString, StringComparison.OrdinalIgnoreCase))
