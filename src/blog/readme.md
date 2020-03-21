@@ -2,13 +2,13 @@
 
 <div class="posts">
   <div class="post" v-for="post in posts">
-    <h2><a :href="post.url">{{ post.title }}</a></h2>
+    <h2><a :href="post.path">{{ post.title }}</a></h2>
     <time
           :datetime="post.date"
         >{{ post.date | toDate }}</time>
     <p>{{ post.description }}</p>
     <div class="bottom-row">
-      <a :href="post.url">Read more</a>
+      <a :href="post.path">Read more</a>
       <div class="tags">
         <span v-for="tag in post.tags">{{ tag }}</span>
       </div>
@@ -17,12 +17,15 @@
 </div>
 
 <script>
-import posts from './posts';
+import { getPostsByDateDescending } from '../../tools/posts';
 export default {
   data() {
     return {
-      posts
+      posts: []
     }
+  },
+  mounted(){
+    this.posts = getPostsByDateDescending(this.$site.pages);
   }
 };
 </script>
@@ -31,7 +34,7 @@ export default {
 .post{
   margin-bottom: 2em;
 
-  h2{
+  h2 {
     margin: 0.2em 0;
   }
 

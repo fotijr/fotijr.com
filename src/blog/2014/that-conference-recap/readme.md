@@ -7,7 +7,7 @@ meta:
   - name: keywords
     content: csharp dotnet JavaScript
   - name: description
-    content: Article on TypeScript
+    content: That Conference 2014 was an amazing experience filled with meeting new people, leveling up skills, and learning new tools.
 ---
 
 That Conference just wrapped up, and it was incredible. It was the conference’s third year in existence, and my first year in attendance. I learned so much about all phases of development. I’m still in shock at how affordable the conference is, and I can’t recommend it highly enough to anyone in our industry. Here are my notes on the sessions I attended. Be sure to check out the speakers highlighted below, they are all friendly, immense sources of knowledge.
