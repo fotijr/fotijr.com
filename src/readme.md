@@ -53,10 +53,6 @@ export default {
   .row {
     flex-direction: column;
   }
-
-  h2 {
-      margin-bottom: 0;
-  }
 }
 
 div.post:first-child{
