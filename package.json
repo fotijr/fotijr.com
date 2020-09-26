@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Personal site of Dominic Foti Jr, served at https://fotijr.com.",
   "scripts": {
-    "serve": "vuepress dev src",
+    "dev": "vuepress dev src",
     "build": "vuepress build src"
   },
   "main": "index.js",
@@ -13,11 +13,11 @@
   "private": false,
   "devDependencies": {
     "@vuepress/plugin-blog": "^1.9.2",
-    "node-sass": "^4.13.1",
-    "sass-loader": "^8.0.2",
-    "vuepress": "^1.4.0"
+    "node-sass": "^4.14.1",
+    "sass-loader": "^10.0.2",
+    "vuepress": "^1.6.0"
   },
   "dependencies": {
-    "date-fns": "^2.11.0"
+    "date-fns": "^2.16.1"
   }
 }
