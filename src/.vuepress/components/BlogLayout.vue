@@ -15,7 +15,7 @@
         <div class="col about">
           <h3>About Me</h3>
           <p>
-            Hi, I'm Dominic. I'm a software engineer working mostly with .NET Core and web technologies.
+            Hi, I'm Dominic. I'm a software engineer building front-end web apps, back-end services, and some things in between. I most enjoy working with TypeScript and .NET Core.
             Check out some of my
             <a
               href="/projects"
