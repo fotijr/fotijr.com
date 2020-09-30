@@ -8,7 +8,7 @@ meta:
   - name: keywords
     content: javascript vue vite svg css animation
   - name: description
-    content: SpaceVG is the place.
+    content: Building an SVG animation with Vue and Vite.
 ---
 
 Last week I started on a fun project to try out a few technologies. My goals were:
