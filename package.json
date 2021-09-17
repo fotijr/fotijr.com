@@ -13,7 +13,7 @@
   "private": false,
   "devDependencies": {
     "@vuepress/plugin-blog": "^1.9.2",
-    "node-sass": "^4.14.1",
+    "sass": "^1.41.1",
     "sass-loader": "^10.0.2",
     "vuepress": "^1.6.0"
   },
