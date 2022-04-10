@@ -11,7 +11,7 @@ meta:
     content: Search movies using React & Netlify server functions.
 ---
 
-I built [Searchovie](https://searchovie.fotijr.com/), a web app for searching movies. It's a React app written in TypeScript. Styling is done with Tailwind CSS, and the data source is [The Movie DB's API](https://developers.themoviedb.org/3/movies/get-popular-movies).
+I built [Searchovie](https://searchovie.fotijr.com/), a web app for searching movies ([source](https://github.com/fotijr/searchovie)). It's a React app written in TypeScript. Styling is done with Tailwind CSS, and the data source is [The Movie DB's API](https://developers.themoviedb.org/3/movies/get-popular-movies).
 
 ![Searchovie screenshot](./searchovie-screenshot.png)
 
@@ -37,3 +37,7 @@ The CLI even made the environment variable accessible when running locally! See 
 Most functionality was working well, so I was fairly pleased. My only disappointment was in having to switch from TS to JS when jumping between front-end and back-end code. Eventually I googled it to see what my options were, and I found that native TS support was added to Netlify Functions [last year](https://www.netlify.com/blog/2021/04/19/announcing-native-typescript-support-for-netlify-functions/)! Converting to TS was trivial, and immediately I had type checking 🙌
 
 Overall, using Netlify Functions was a smooth and enjoyable developer experience. It's a great free resource that I'm sure to use again.
+
+[🔍 Try out Searchovie](https://searchovie.fotijr.com/)
+
+[💻 Go to the source code](https://github.com/fotijr/searchovie)
