@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cursor centered</title>
+    <style>
+      body {
+        /* Centers child div horizontally & vertically */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        cursor: url('data:image/jpeg;base64,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'), auto;
+
+        min-height: 100vh;
+        margin: 0;
+      }
+
+       canvas {
+        /* Centers div content horizontally & vertically */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        /* Just for demo styling, not needed for layout */
+        width: 36px;
+        height: 36px;
+        /* background-color: #fff; */
+        /* border: 2px gray solid; */
+      }
+    </style>
+  </head>
+  <body>
+    <canvas width="36" height="36"></canvas>
+    <script>
+      const canvas = document.getElementsByTagName('canvas')[0];
+      const { width, height } = canvas;
+      const borderWidth = 1;
+      const ctx = canvas.getContext('2d');
+
+      // draw background
+      ctx.fillStyle = '#fff';
+      ctx.fillRect(0, 0, width, height);
+
+      // Draw border
+      ctx.lineWidth = borderWidth;
+      ctx.strokeStyle = 'gray';
+      ctx.rect(borderWidth, borderWidth, (width - (borderWidth * 2)), (height - (borderWidth * 2)));
+      ctx.stroke();
+
+      // Draw text
+      ctx.strokeStyle = '#000';
+      ctx.textAlign = "center";
+      ctx.font = '12px Times New Roman';
+      ctx.fillStyle = '#000';
+      ctx.fillText('Centered with cursor.', width / 2, height / 2);
+
+      const base64 = canvas.toDataURL("image/jpeg", 1.0); //toDataURL();
+      console.log(base64)
+    </script>
+  </body>
+</html>

@@ -31,12 +31,8 @@ export default {
 </script>
 
 <style lang="scss">
-.post{
+.post {
   margin-bottom: 2em;
-
-  h2 {
-    margin: 0.2em 0;
-  }
 
   p{
     margin-bottom: 0.2em;
