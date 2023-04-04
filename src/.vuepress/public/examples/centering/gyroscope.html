@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Absolutely centered</title>
+    <style>
+      div {
+        position: absolute;
+
+        /* Just for demo styling, not needed for layout */
+        border: 2px gray solid;
+        padding: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <div>Centered gyroscopically.</div>
+    <script>
+      const div = document.getElementsByTagName('div')[0];
+
+      // Request permission for iOS 13+ devices
+      if (
+        DeviceMotionEvent &&
+        typeof DeviceMotionEvent.requestPermission === 'function'
+      ) {
+        DeviceMotionEvent.requestPermission();
+      }
+
+      /** Scale relative value from one range to another */
+      const scaleRangeValue = (value, rangeIn, rangeOut) => {
+        return (
+          ((value - rangeIn[0]) * (rangeOut[1] - rangeOut[0])) /
+            (rangeIn[1] - rangeIn[0]) +
+          rangeOut[0]
+        );
+      };
+
+      /** Position div based on deviceorientation event with axis angles */
+      const positionDiv = (event) => {
+        // convert angle values into percentage points
+        const x = scaleRangeValue(event.beta, [-90, 90], [-50, 50]);
+        const y = scaleRangeValue(event.gamma, [-90, 90], [-50, 50]);
+
+        if (x > 0) {
+          div.style.right = `${50 - x}%`;
+          div.style.left = 'inherit';
+        } else {
+          div.style.left = `${50 - Math.abs(x)}%`;
+          div.style.right = 'inherit';
+        }
+
+        if (y > 0) {
+          div.style.bottom = `${50 - y}%`;
+          div.style.top = 'inherit';
+        } else {
+          div.style.top = `${50 - Math.abs(y)}%`;
+          div.style.bottom = 'inherit';
+        }
+      };
+
+      window.addEventListener('deviceorientation', positionDiv);
+    </script>
+  </body>
+</html>
