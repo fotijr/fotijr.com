@@ -20,15 +20,13 @@
     <script>
       const div = document.getElementsByTagName('div')[0];
 
-      setTimeout(() => {
-        // Request permission for iOS 13+ devices
-        if (
-          DeviceMotionEvent &&
-          typeof DeviceMotionEvent.requestPermission === 'function'
-        ) {
-          DeviceMotionEvent.requestPermission();
-        }
-      }, 600);
+      // Request permission for iOS 13+ devices
+      if (
+        window.DeviceMotionEvent &&
+        typeof window.DeviceMotionEvent.requestPermission === 'function'
+      ) {
+        window.DeviceMotionEvent.requestPermission();
+      }
 
       /** Scale relative value from one range to another */
       const scaleRangeValue = (value, rangeIn, rangeOut) => {
