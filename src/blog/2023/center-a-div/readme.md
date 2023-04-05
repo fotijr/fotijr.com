@@ -19,7 +19,7 @@ Instead of a clear answer popping into my head, I initially just had questions. 
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The senior engineer waiting for you to finish your question so they can reply “it depends”. <a href="https://t.co/mJ3FnpK5FH">pic.twitter.com/mJ3FnpK5FH</a></p>&mdash; Taylor Poindexter (@engineering_bae) <a href="https://twitter.com/engineering_bae/status/1570756303374684162?ref_src=twsrc%5Etfw">September 16, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-It struck me how interesting the simplest of questions can be, and so I wanted to dive in. Here's my version of _The Definitive Guide on How to Center a Div_.
+It struck me how interesting this simple question actually was, and so I wanted to dive in. Here's my version of _The Definitive Guide on How to Center a Div_.
 
 All linked demos are single page examples with unminified CSS and JS and so are easily explored & downloaded.
 
@@ -70,7 +70,7 @@ Info here about base encoding.
 ### Cursor position in JS
 Detect a mouse move in JavaScript and update CSS variables. 
 
-✨ <a href="/examples/centering/cursor.html">Demo with cursor centering</a>
+✨ <a href="/examples/centering/cursor-vars.html">Demo with cursor centering</a>
 
 
 ## Centered geospatially
