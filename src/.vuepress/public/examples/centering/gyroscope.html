@@ -32,8 +32,8 @@
       /** Position div based on deviceorientation event with axis angles */
       const positionDiv = (event) => {
         // convert angle values into percentage points
-        const x = scaleRangeValue(event.beta, [-90, 90], [-50, 50]);
-        const y = scaleRangeValue(event.gamma, [-90, 90], [-50, 50]);
+        const x = scaleRangeValue(event.gamma, [-90, 90], [-50, 50]);
+        const y = scaleRangeValue(event.beta, [-90, 90], [-50, 50]);
 
         if (x > 0) {
           div.style.right = `${50 - x}%`;
