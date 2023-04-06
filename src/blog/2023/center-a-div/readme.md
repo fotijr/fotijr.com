@@ -95,7 +95,7 @@ top: var(--cursor-y);
 
 
 ## Centered geospatially
-If you're trying to center content on a web page, your thinking too small. Instead, center it on ...the planet. Get a user's location using `navigator.geolocation.getCurrentPosition()`. Once the latitude and longitude coordinates are known, center the content over the user's location using [Globe.gl](https://globe.gl/) to plot it on a globe.
+If you're trying to center content on a web page, you're thinking too small. Instead, center it on ...the planet. Get a user's location using `navigator.geolocation.getCurrentPosition()`. Once the latitude and longitude coordinates are known, center the content over the user's location using [Globe.gl](https://globe.gl/) to plot it on a globe.
 
 ✨ <a href="/examples/centering/geo.html">Demo with geo centering</a>
 
