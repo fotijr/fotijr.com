@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cursor centered with vars</title>
+    <style>
+      :root {
+        --cursor-x: 0;
+        --cursor-y: 0;
+      }
+
+      html, body {
+        cursor: none;
+      }
+
+      div {
+        cursor: none;
+        position: absolute;
+        left: var(--cursor-x);
+        top: var(--cursor-y);
+
+        /* Just for demo styling, not needed for layout */
+        border: 2px gray solid;
+        padding: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <div>Centered absolutely.</div>
+    <script>
+      const root = document.documentElement;
+
+      window.addEventListener('mousemove', (event) => {
+        const { pageX, pageY } = event;
+        root.style.setProperty('--cursor-x', `${pageX}px`);
+        root.style.setProperty('--cursor-y', `${pageY}px`);
+      });
+    </script>
+  </body>
+</html>

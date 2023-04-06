@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Absolutely centered</title>
+    <title>Gyroscopically centered</title>
     <style>
       div {
         position: absolute;
@@ -13,22 +13,16 @@
         border: 2px gray solid;
         padding: 1em;
       }
+
+      button {
+        padding: 1em 2em;
+      }
     </style>
   </head>
   <body>
-    <div>Centered gyroscopically.</div>
+    <div><button>Tap to center gyroscopically. This won't be very fun unless you're on mobile.</button></div>
     <script>
       const div = document.getElementsByTagName('div')[0];
-
-      setTimeout(() => {
-        // Request permission for iOS 13+ devices
-        if (
-          DeviceMotionEvent &&
-          typeof DeviceMotionEvent.requestPermission === 'function'
-        ) {
-          DeviceMotionEvent.requestPermission();
-        }
-      }, 600);
 
       /** Scale relative value from one range to another */
       const scaleRangeValue = (value, rangeIn, rangeOut) => {
@@ -42,8 +36,8 @@
       /** Position div based on deviceorientation event with axis angles */
       const positionDiv = (event) => {
         // convert angle values into percentage points
-        const x = scaleRangeValue(event.beta, [-90, 90], [-50, 50]);
-        const y = scaleRangeValue(event.gamma, [-90, 90], [-50, 50]);
+        const x = scaleRangeValue(event.gamma, [-90, 90], [-50, 50]);
+        const y = scaleRangeValue(event.beta, [-90, 90], [-50, 50]);
 
         if (x > 0) {
           div.style.right = `${50 - x}%`;
@@ -62,7 +56,21 @@
         }
       };
 
-      window.addEventListener('deviceorientation', positionDiv);
+      const startButton = document.getElementsByTagName('button')[0];
+      startButton.onclick = (e) => {
+        e.preventDefault();
+
+        // Request permission for iOS 13+ devices
+        if (
+          window.DeviceMotionEvent &&
+          typeof window.DeviceMotionEvent.requestPermission === 'function'
+        ) {
+          window.DeviceMotionEvent.requestPermission();
+        }
+
+        window.addEventListener('deviceorientation', positionDiv);
+        div.innerHTML = 'Centered gyroscopically.';
+      };
     </script>
   </body>
 </html>

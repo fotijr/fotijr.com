@@ -2,7 +2,7 @@
 title: How to center a div
 subtitle: The definitive guide on how to center a div.
 lang: en-US
-published: 2023-03-19
+published: 2023-04-06
 layout: BlogLayout
 meta:
   - name: keywords
@@ -19,7 +19,7 @@ Instead of a clear answer popping into my head, I initially just had questions. 
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The senior engineer waiting for you to finish your question so they can reply “it depends”. <a href="https://t.co/mJ3FnpK5FH">pic.twitter.com/mJ3FnpK5FH</a></p>&mdash; Taylor Poindexter (@engineering_bae) <a href="https://twitter.com/engineering_bae/status/1570756303374684162?ref_src=twsrc%5Etfw">September 16, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-It struck me how interesting the simplest of questions can be, and so I wanted to dive in. Here's my version of _The Definitive Guide on How to Center a Div_.
+It struck me how interesting this simple question actually was, and so I wanted to dive in. Here's my version of _The Definitive Guide on How to Center a Div_.
 
 All linked demos are single page examples with unminified CSS and JS and so are easily explored & downloaded.
 
@@ -62,15 +62,36 @@ This is how [Angular Material's CDK](https://material.angular.io/cdk/portal/over
 Why worry about where to position the div? Just put it on the user's cursor. If it's in the wrong place, it's a user error. There are two ways to do this: base64-encode the content, or get the mouse position in JS and update the content's absolute position.
 
 ### Base64-encoded cursor
-Info here about base encoding.
+Content can be saved as an image, then that image can be used as a CSS cursor.
+```css
+cursor: url('my-cool.svg'), auto;
+```
+
+For our example, it seemed like cheating to screenshot content and format the image. Instead, the demo page draws the content in a `<canvas>` element and then the content is base64-encoded and logged to the console. From there, I copied the data and put it into css using `cursor: url('data:image/jpeg;base64,LONG-DATA-STRING', auto);`.
+
+The most difficult part about getting this working was the browser silently disallowing images over a certain size. Eventually I figured out I needed to first size the canvas element to 128x128 pixels before base64-encoding the data. MDN has [helpful details and best-practices](https://developer.mozilla.org/en-US/docs/Web/CSS/cursor#icon_size_limits) to consider if this is a technique you need to implement.
 
 ✨ <a href="/examples/centering/cursor.html">Demo with base64 cursor</a>
 
 
 ### Cursor position in JS
-Detect a mouse move in JavaScript and update CSS variables. 
+In addition to the pure-CSS approaches, you can let JavaScript assist _a little_ to improve the flexibility. Listening to the `mousemove` event allows for tracking the mouse position, and in the event listener you can pass the values from JS to CSS variables.
 
-✨ <a href="/examples/centering/cursor.html">Demo with cursor centering</a>
+```js
+window.addEventListener('mousemove', (event) => {
+  const { pageX, pageY } = event;
+  root.style.setProperty('--cursor-x', `${pageX}px`);
+  root.style.setProperty('--cursor-y', `${pageY}px`);
+});
+```
+
+In CSS the content can be positioned absolutely, with the `left` and `top` values coming from the CSS variables.
+```css
+left: var(--cursor-x);
+top: var(--cursor-y);
+```
+
+✨ <a href="/examples/centering/cursor-vars.html">Demo with cursor centering</a>
 
 
 ## Centered geospatially
@@ -79,6 +100,11 @@ If you're trying to center content on a web page, your thinking too small. Inste
 ✨ <a href="/examples/centering/geo.html">Demo with geo centering</a>
 
 ## Centered gyroscopically
-[MDN doc](https://developer.mozilla.org/en-US/docs/Web/API/Window/deviceorientation_event) on `deviceorientation`. [Great demo](https://sensor-js.xyz/demo.html) on device sensor data available in JS.
+This approach will only work on mobile devices, but it's a lot of fun. The
+[deviceorientation](https://developer.mozilla.org/en-US/docs/Web/API/Window/deviceorientation_event) event exposes a devices gryoscope & accelerometer data. To see all of what's possible, check out this [very detailed demo](https://sensor-js.xyz/demo.html) on sensor data available in JS.
 
 ✨ <a href="/examples/centering/gyroscope.html">Demo with gyroscopic centering</a>
+
+
+## And if all else fails...
+You can party like it's 1999 and do your whole layout in a `<table>`.
