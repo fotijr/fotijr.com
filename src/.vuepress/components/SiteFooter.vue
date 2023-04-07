@@ -50,15 +50,15 @@ export default {
 footer {
   display: flex;
   margin-top: 3em;
-  background-color: #000;
-  color: #fff;
+  background-color: var(--inverse-color);
+  color: var(--primary-color);
 
   ul {
     list-style-type: none;
     margin: 0.5em;
 
     a {
-      color: #fff;
+      color: var(--primary-color);
     }
   }
 
@@ -67,9 +67,9 @@ footer {
   }
 
   .source {
-    color: #000;
-    background-color: #fff;
-    border: 5px solid #000;
+    color: var(--inverse-color);
+    background-color: var(--primary-color);
+    border: 5px solid var(--inverse-color);
     display: flex;
     align-items: center;
     padding: 1em 2em;
