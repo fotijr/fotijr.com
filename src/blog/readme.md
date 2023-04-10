@@ -49,8 +49,8 @@ export default {
     margin-top: 0.7em;
 
     span{
-      background-color: #000;
-      color: #fff;
+      background-color: var(--inverse-color);
+      color: var(--primary-color);
       padding: 0.2em 0.35em;
       margin-right: 0.4em;
       font-size: 14px;

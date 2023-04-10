@@ -6,7 +6,7 @@
           <span class="site-title">Foti Jr</span>
         </a>
       </div>
-      <div class="section dark">
+      <div class="section links">
         <ul>
           <router-link tag="li" class="nav-item" to="/projects" active-class="active">
             <a class="nav-link">Projects</a>
@@ -48,7 +48,8 @@ export default {
     white-space: nowrap;
     overflow: hidden;
     letter-spacing: 0.2em;
-    border-right: 0.7em solid #000;
+    color: var(--inverse-color);
+    border-right: 0.7em solid var(--inverse-color);
     margin-right: -0.6em;
     animation: typing 0.6s steps(8, end), blink-caret 0.75s 8;
     animation-fill-mode: forwards;
@@ -73,7 +74,7 @@ export default {
     border-color: transparent;
   }
   50% {
-    border-color: #000;
+    border-color: var(--inverse-color);
   }
 }
 
@@ -81,7 +82,7 @@ export default {
   nav {
     flex-direction: column;
 
-    .section.dark {
+    .section.links {
       flex: 1 1;
     }
 
@@ -102,7 +103,7 @@ nav {
   div.section {
     flex-basis: 0;
     flex-grow: 1;
-    border: 5px solid #000;
+    border: 5px solid var(--inverse-color);
     align-items: center;
     display: flex;
 
@@ -111,8 +112,8 @@ nav {
       padding-right: 4em;
     }
 
-    &.dark {
-      background-color: #000;
+    &.links {
+      background-color: var(--inverse-color);
       border-width: 0;
     }
   }
@@ -130,7 +131,7 @@ ul {
     font-family: "Major Mono Display", monospace;
 
     a {
-      color: #fff;
+      color: var(--primary-color);
       text-decoration: none;
       font-size: 18px;
     }

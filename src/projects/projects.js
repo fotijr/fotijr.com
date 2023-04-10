@@ -32,7 +32,7 @@ export default [
         description: `Speedy Unicode is a fun application I made to let me quickly 
         use unicode emojis in any desktop application. I love Slack's UX for adding emojis- 
         the search feature in particular makes it easy and fun, and I wanted that 
-        experience across all apps I use.`,
+        experience across all operating systems and apps I use.`,
         links: [
             { text: 'GitHub', href: 'https://github.com/fotijr/speedy-unicode' }
         ],
